@@ -1,11 +1,8 @@
-// import java.util.ArrayList;
-// import java.util.List;
-// import java.util.Arrays;
-
 public class Event{
   private int mTotalCost;
   private int mNumberOfGuests;
   private boolean mFood;
+  private int mFoodType;
   private boolean mDrinks;
   private boolean mEntertainment;
 
@@ -15,29 +12,38 @@ public class Event{
   public int getTotalCost(){
     return mTotalCost;
   }
-  public int setNumberOfGuests(int num){
+  public void setNumberOfGuests(int num){
     mNumberOfGuests = num;
-    return mNumberOfGuests;
   }
-  public boolean setFood(char food){
+  public void setFood(char food){
     mFood = food =='y';
+  }
+  public boolean getFood(){
     return mFood;
   }
-  public boolean setDrinks(char drinks){
-    mDrinks = drinks == 'y';
-    return mDrinks;
+  public void setFoodType(int choice){
+    if(choice == 1){
+      mFoodType = 5;
+    }else{
+      mFoodType = 15;
+    }
   }
-  public boolean setEntertainment(char entertainment){
+  public void setDrinks(char drinks){
+    mDrinks = drinks == 'y';
+  }
+  public void setEntertainment(char entertainment){
     mEntertainment = entertainment == 'y';
-    return mEntertainment;
   }
   public void setTotalCost(){
     int total = 0;
-    if(mDrinks == true){
+    if(mDrinks){
       total += (10 * mNumberOfGuests);
     }
-    if(mEntertainment == true){
-      total += (15 * mNumberOfGuests);
+    if(mFood){
+      total += (mFoodType * mNumberOfGuests);
+    }
+    if(mEntertainment){
+      total += 1000;
     }
     mTotalCost += total;
   }

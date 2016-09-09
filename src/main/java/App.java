@@ -25,7 +25,31 @@ public class App {
     newEvent.setTotalCost();
     System.out.println("----------------------------------------");
     System.out.println("----------------------------------------");
-    System.out.println("Great we'll get that all set up for you!\nYour total is: $" + newEvent.getTotalCost());
+    System.out.println("Great we'll get that all set up for you!\n\n");
+    System.out.println("Number of guests: " + newEvent.getNumberOfGuests());
+    System.out.printf("Food: ");
+    if (newEvent.getFood()){
+      if(newEvent.getFoodType() == 1){
+        System.out.println("Snack bar");
+      }else{
+        System.out.println("Four course meal");
+      }
+    }else{
+      System.out.println("No food");
+    }
+    System.out.printf("Drinks: ");
+    if(newEvent.getDrinks()){
+      System.out.println("Full bar");
+    }else{
+      System.out.println("BYOB");
+    }
+    System.out.printf("Entertainment: ");
+    if(newEvent.getEntertainment()){
+      System.out.println("House Band");
+    }else{
+      System.out.println("none");
+    }
+    System.out.println(\n"Your total is: $" + newEvent.getTotalCost());
     System.out.println("----------------------------------------");
   }
   public static void printSign(){

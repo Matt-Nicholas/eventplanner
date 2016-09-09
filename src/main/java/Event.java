@@ -9,9 +9,6 @@ public class Event{
   public Event(){
     mTotalCost = 499;
   }
-  public int getTotalCost(){
-    return mTotalCost;
-  }
   public void setNumberOfGuests(int num){
     mNumberOfGuests = num;
   }
@@ -58,5 +55,8 @@ public class Event{
       total += 1000;
     }
     mTotalCost += total;
+  }
+  public int getTotalCost(){
+    return mTotalCost;
   }
 }

@@ -10,8 +10,8 @@ Allows users to plan a custom event and calculates the cost
 
 ## Setup/Installation Requirements
 
-* open browser
-* visit https://matt-nicholas.github.io/eventplanner
+* open the eventplanner directory in the console
+* run App.class
 
 ## BDD
 -can set weather or not food will be provided

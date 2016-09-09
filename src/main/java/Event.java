@@ -7,7 +7,7 @@ public class Event{
   private boolean mEntertainment;
 
   public Event(){
-    mTotalCost = 500;
+    mTotalCost = 499;
   }
   public int getTotalCost(){
     return mTotalCost;

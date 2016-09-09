@@ -4,40 +4,41 @@ import static org.junit.Assert.*;
 
 public class EventTest{
 
+    Event testEvent = new Event();
 
     @Test
     public void setNumberOfGuests_setsNumberOfGuestsAttendingTheEvent_100(){
-      Event testEvent = new Event();
       int expectedOutput = 100;
-      assertEquals(expectedOutput, testEvent.setNumberOfGuests(100));
+      testEvent.setNumberOfGuests(100);
+      assertEquals(expectedOutput, testEvent.getNumberOfGuests());
     }
     @Test
     public void setDrinks_returnsBoolTrueIfDrinksAreSelected_true(){
-      Event testEvent = new Event();
       boolean expectedOutput = true;
-      assertEquals(expectedOutput, testEvent.setDrinks('y'));
+      testEvent.setDrinks('y');
+      assertEquals(expectedOutput, testEvent.getDrinks());
     }
     @Test
     public void setEntertainment_returnsBoolTrueIfEntertainmentAreSelected_true(){
-      Event testEvent = new Event();
       boolean expectedOutput = true;
-      assertEquals(expectedOutput, testEvent.setEntertainment('y'));
+      testEvent.setEntertainment('y');
+      assertEquals(expectedOutput, testEvent.getEntertainment());
     }
     @Test
     public void setFood_returnsBoolTrueIfFoodAreSelected_true(){
-      Event testEvent = new Event();
       boolean expectedOutput = true;
-      assertEquals(expectedOutput, testEvent.setFood('y'));
-    }
-
-    @Test
-    public void getTotalCost_returnsTotalCost_100(){
-      Event testEvent = new Event();
-      int expectedOutput = 3000;
-      testEvent.setNumberOfGuests(100);
-      testEvent.setDrinks('y');
-      testEvent.setEntertainment('y');
       testEvent.setFood('y');
+      assertEquals(expectedOutput, testEvent.getFood());
+    }
+    @Test
+    public void setFoodType_returnFoodTypeChosen_1(){
+      int expectedOutput = 5;
+      testEvent.setFoodType(1);
+      assertEquals(expectedOutput, testEvent.getFoodType());
+    }
+    @Test
+    public void setTotalCost_returnsTotalCost_499(){
+      int expectedOutput = 499;
       testEvent.setTotalCost();
       assertEquals(expectedOutput, testEvent.getTotalCost());
     }

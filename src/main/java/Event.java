@@ -15,6 +15,9 @@ public class Event{
   public void setNumberOfGuests(int num){
     mNumberOfGuests = num;
   }
+  public int getNumberOfGuests(){
+    return mNumberOfGuests;
+  }
   public void setFood(char food){
     mFood = food =='y';
   }
@@ -28,11 +31,20 @@ public class Event{
       mFoodType = 15;
     }
   }
+  public int getFoodType(){
+    return mFoodType;
+  }
   public void setDrinks(char drinks){
     mDrinks = drinks == 'y';
   }
+  public boolean getDrinks(){
+    return mDrinks;
+  }
   public void setEntertainment(char entertainment){
     mEntertainment = entertainment == 'y';
+  }
+  public boolean getEntertainment(){
+    return mEntertainment;
   }
   public void setTotalCost(){
     int total = 0;
